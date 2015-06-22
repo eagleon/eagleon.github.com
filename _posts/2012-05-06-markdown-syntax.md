@@ -10,7 +10,7 @@ tags:
 ---
 
 
-**NOTE:** 2015-6-22 新增[Sublime Text插件](#sublime-text)
+**NOTE:** 2015-6-22 新增[Sublime Text插件](#sublime-text-plugin)
 
 [eng-doc]:http://daringfireball.net/projects/markdown/syntax
 
@@ -718,8 +718,7 @@ Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的�
     .   英文句点
     !   惊叹号
 
-
-## Sublime Text 插件
+<h3 id="sublime-text-plugin">Sublime Text 插件</h3>
 
 * MarkDownPreview:在浏览器中预览MarkDown文件效果
 
