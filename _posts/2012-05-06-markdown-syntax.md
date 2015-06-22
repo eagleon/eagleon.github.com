@@ -10,11 +10,13 @@ tags:
 ---
 
 
-**NOTE:** This is Simplelified  Chinese Edition Document of Markdown Syntax. If you are seeking for English Edition Document. Please refer to [Markdown: Syntax][eng-doc].
+**NOTE:** 2015-6-22 新增[Sublime Text插件](#sublime-text)
 
 [eng-doc]:http://daringfireball.net/projects/markdown/syntax
 
-**声明：** 这份文档派生(fork)于[繁体中文版](http://markdown.tw/)，在此基础上进行了繁体转简体工作，并进行了适当的润色。此文档用 Markdown 语法编写，你可以到这里[查看它的源文件][src1]。「繁体中文版的原始文件可以[查看这里][src] 。」--By @[riku][t] / 本项目托管于 [GitCafe][g]
+**声明：** This is Simplelified  Chinese Edition Document of Markdown Syntax. If you are seeking for English Edition Document. Please refer to [Markdown: Syntax][eng-doc]
+
+这份文档派生(fork)于[繁体中文版](http://markdown.tw/)，在此基础上进行了繁体转简体工作，并进行了适当的润色。此文档用 Markdown 语法编写，你可以到这里[查看它的源文件][src1]。「繁体中文版的原始文件可以[查看这里][src] 。」--By @[riku][t] / 本项目托管于 [GitCafe][g]
 
 **注：** 本项目同时也托管于 [Github][] 上，请通过 fork＋pull request 方式来帮忙改进本项目。
 
@@ -212,14 +214,14 @@ Markdown 也允许你偷懒只在整个段落的第一行最前面加上 `>` ：
 
 引用的区块内也可以使用其他的 Markdown 语法，包括标题、列表、代码区块等：
 
-	> ## 这是一个标题。
-	> 
-	> 1.   这是第一行列表项。
-	> 2.   这是第二行列表项。
-	> 
-	> 给出一些例子代码：
-	> 
-	>     return shell_exec("echo $input | $markdown_script");
+    > ## 这是一个标题。
+    > 
+    > 1.   这是第一行列表项。
+    > 2.   这是第二行列表项。
+    > 
+    > 给出一些例子代码：
+    > 
+    >     return shell_exec("echo $input | $markdown_script");
 
 任何像样的文本编辑器都能轻松地建立 email 型的引用。例如在 BBEdit 中，你可以选取文字后然后从选单中选择*增加引用阶层*。
 
@@ -479,9 +481,9 @@ Markdown 支持两种形式的链接语法： *行内式*和*参考式*两种形
 
 下面这三种链接的定义都是相同：
 
-	[foo]: http://example.com/  "Optional Title Here"
-	[foo]: http://example.com/  'Optional Title Here'
-	[foo]: http://example.com/  (Optional Title Here)
+    [foo]: http://example.com/  "Optional Title Here"
+    [foo]: http://example.com/  'Optional Title Here'
+    [foo]: http://example.com/  (Optional Title Here)
 
 **请注意：**有一个已知的问题是 Markdown.pl 1.0.1 会忽略单引号包起来的链接 title。
 
@@ -498,24 +500,24 @@ Markdown 支持两种形式的链接语法： *行内式*和*参考式*两种形
 
 链接辨别标签可以有字母、数字、空白和标点符号，但是并*不*区分大小写，因此下面两个链接是一样的：
 
-	[link text][a]
-	[link text][A]
+    [link text][a]
+    [link text][A]
 
 *隐式链接标记*功能让你可以省略指定链接标记，这种情形下，链接标记会视为等同于链接文字，要用隐式链接标记只要在链接文字后面加上一个空的方括号，如果你要让 "Google" 链接到 google.com，你可以简化成：
 
-	[Google][]
+    [Google][]
 
 然后定义链接内容：
 
-	[Google]: http://google.com/
+    [Google]: http://google.com/
 
 由于链接文字可能包含空白，所以这种简化型的标记内也许包含多个单词：
 
-	Visit [Daring Fireball][] for more information.
+    Visit [Daring Fireball][] for more information.
 
 然后接着定义链接：
 
-	[Daring Fireball]: http://daringfireball.net/
+    [Daring Fireball]: http://daringfireball.net/
 
 链接的定义可以放在文件中的任何一个地方，我比较偏好直接放在链接出现段落的后面，你也可以把它放在文件最后面，就像是注解一样。
 
@@ -608,15 +610,15 @@ Markdown 使用星号（`*`）和底线（`_`）作为标记强调字词的符�
 
 代码区段的起始和结束端都可以放入一个空白，起始端后面一个，结束端前面一个，这样你就可以在区段的一开始就插入反引号：
 
-	A single backtick in a code span: `` ` ``
-	
-	A backtick-delimited string in a code span: `` `foo` ``
+    A single backtick in a code span: `` ` ``
+    
+    A backtick-delimited string in a code span: `` `foo` ``
 
 会产生：
 
-	<p>A single backtick in a code span: <code>`</code></p>
-	
-	<p>A backtick-delimited string in a code span: <code>`foo`</code></p>
+    <p>A single backtick in a code span: <code>`</code></p>
+    
+    <p>A backtick-delimited string in a code span: <code>`foo`</code></p>
 
 在代码区段内，`&` 和方括号**都**会被自动地转成 HTML 实体，这使得插入 HTML 原始码变得很容易，Markdown 会把下面这段：
 
@@ -715,6 +717,11 @@ Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的�
     -   减号
     .   英文句点
     !   惊叹号
+
+
+## Sublime Text 插件
+
+* MarkDownPreview:在浏览器中预览MarkDown文件效果
 
 <h2 id="acknowledgement">感谢</h2>
 
