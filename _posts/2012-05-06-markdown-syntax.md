@@ -721,6 +721,13 @@ Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的�
 <h3 id="sublime-text-plugin">Sublime Text 插件</h3>
 
 * MarkDownPreview:在浏览器中预览MarkDown文件效果
+  快捷键
+  
+  ST支持自定义快捷键，Markdown Preview默认没有快捷键。我们可以为Preview in Browser功能设置快捷键。打开Preferences -> Key Bindings User，在中括号内添加以下代码：
+
+
+  { "keys": ["alt+m"], "command": "markdown_preview", "args": { "target": "browser"} }
+  此处设置的快捷键为"alt+m"。
 
 <h2 id="acknowledgement">感谢</h2>
 
